@@ -1,12 +1,19 @@
-const slider = document.getElementsByClassName('slider')
-const food = ['burger', 'salat', 'desert', 'stake', 'zakus', 'pizza']
+const slider = document.getElementById('slider');
+const food = ['burger', 'salat', 'desert', 'stake', 'zakus', 'pizza'];
+foodIndex = 0;
 
 for (let i = 0; i < 6; i++) {
-   document.write(`
-      <img src="img/${food[i]}.jfif">
-      <figcaption style="text-align: center;">${food[i]}</figcaption>
-      `);
-}
+   slider.innerHTML +=
+      `<div class="slider-content">
+         <img src="img/${food[i]}.jfif">
+         <figcaption style="text-align: center;">${food[i]}</figcaption>
+      </div>`
+   };
 
-console.log(slider)
-console.log(food)
+leftButton = document.getElementById('moveLeft');
+rightButton = document.getElementById('moveRight').onclick = function () {
+   
+};
+
+console.log(slider);
+console.log(food);
